@@ -1,14 +1,91 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Togepi Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.processed.css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/wrapper.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/topnav.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/personal.css" />
     <script src="main.js"></script>
 </head>
+
 <body>
-    <p>Hello World!</p>
+    <div class="wrapper">
+        <div class="head-wrapper">
+            <div class="topnav">
+                <div class="main-menu">
+                    <ul>
+                        <li class="nav-item"><a href="#">Home</a></li>
+                        <li class="nav-item"><a href="#about">About</a></li>
+                        <li class="nav-item"><a href="html/friends.html">Friends</a></li>
+                    </ul>
+                </div>
+                <div class="menu-btn">
+                    <a><i class="fas fa-angle-down"></i></a>
+                </div>
+            </div>
+            <header class="header">
+                <hgroup>
+                    <div class="avatar">
+                        <img src="src/img/Togepi.png" alt="">
+                    </div>
+                    <h1 class="header-title">Togepi</h1>
+                    <div class="social">
+                        <a class="btn-instagram" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="btn-twitter" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn-pinterest" href="">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a class="btn-vimeo" href="">
+                            <i class="fab fa-vimeo-v"></i>
+                        </a>
+                        <a class="btn-tumblr" href="">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                    </div>
+
+                </hgroup>
+            </header>
+        </div>
+    </div>
+    <div class="main">
+        <section class="personal" id="about">
+            <h3 class="personal-title">About me</h3>
+            <div class="inner cell-group">
+               <div class="cell">
+                    <i class="fa fa-utensils"></i>
+                    <h3 class="cell-title">Food</h3>
+                    <p class="cell-content">Sushi</p>
+               </div>
+               <div class="cell">
+                    <i class="far fa-angry"></i>
+                    <h3 class="cell-title">Dislike</h3>
+                    <p class="cell-content">Crying</p>
+               </div>
+               <div class="cell">
+                    <i class="far fa-grin-hearts"></i>
+                    <h3 class="cell-title">Like</h3>
+                    <p class="cell-content">Stay with Misty</p>
+               </div>
+               <div class="cell">
+                    <i class="fab fa-angellist"></i>
+                    <h3 class="cell-title">Wish</h3>
+                    <p class="cell-content">Eat tasty food</p>
+               </div>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>

@@ -1,0 +1,50 @@
+.main-menu{
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16pt;
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 98;
+}
+.nav-item{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+}
+.nav-item > a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    line-height: 60px;
+}
+.menu-btn a {
+    color: #fff;
+    font-size: 15pt;
+}
+.menu-btn {
+    display: none;
+    position: fixed;
+    text-align: center;
+    top: 8px;
+    left: 0;
+    right: 0;
+}
+.menu-btn:focus {
+    .main-menu {
+        height: auto;
+    }
+    .main-menu .nav-item {
+        display: block;
+    }
+}
+@media (max-width: 300px) {
+    .main-menu {
+        height: 0;
+        overflow: hidden;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 98;
+    }
+}

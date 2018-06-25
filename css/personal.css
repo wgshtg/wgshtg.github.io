@@ -1,0 +1,57 @@
+.personal {
+	font-family: 'PT Sans', sans-serif;
+	background: url(../src/img/togepi_wallpaper.jpeg) no-repeat center bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	
+	padding: 20px 0px;
+}
+.personal-title {
+	font-size: 35pt;
+	text-align: center;
+}
+.inner {
+	margin: 0 auto;
+	/*padding-top: 30px;*/
+}
+.cell-group {
+	display: table;
+	border-spacing: 20px 0;
+}
+.personal .cell {
+	text-align: center;
+	width: 25%;
+	padding: 35px 0;
+}
+@media(max-width: 600px) {
+	.personal .cell {
+      width: 50%;
+      display: inline-block;
+	}
+}
+@media(max-width:420px){
+	.personal .cell {
+      width: auto;
+      display: block;
+	}
+}
+.personal i {
+	display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: #dee7f4;
+    border-radius: 25%;
+    font-size: 50px;
+    line-height: 100px;
+
+}
+.cell {
+	display: table-cell;
+}
+.cell-title {
+	font-size: 25pt;
+}
+.cell-content {
+	font-size: 15pt;
+	line-height: 20pt;
+}

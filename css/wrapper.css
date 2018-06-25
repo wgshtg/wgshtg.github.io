@@ -1,0 +1,21 @@
+.head-wrapper {
+	background: url(../src/img/pokeball.png) no-repeat center bottom;
+	background-attachment: fixed;
+	height: 100vh;
+	padding: 0;
+  	text-align: center;
+  	background-size: cover;
+  	width: 100%;
+  	position: relative;
+  	box-sizing: border-box;
+}
+.head-wrapper:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .3;
+	background: #959292;
+}
