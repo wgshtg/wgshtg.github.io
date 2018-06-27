@@ -1,0 +1,61 @@
+.moves {
+	font-family: 'PT Sans', sans-serif;
+	/*background: url(../src/img/togepi_wallpaper.jpeg) no-repeat center bottom;*/
+	/*background-size: cover;*/
+	/*background-attachment: fixed;*/
+	background: #fff;
+	/*padding: 20px 0px;*/
+}
+.moves-title {
+	font-size: 35pt;
+	text-align: center;
+}
+.moves .cell {
+	font-size: 16pt;
+	text-align: center;
+	width: calc(50% - 80px);
+	display: inline-block;
+	padding: 35px 0;
+	border-radius: 25px;
+	border-style: double;
+	border-width: 8px;
+	margin: 15px;
+}
+.moves .cell-group {
+	border-collapse:separate;
+  	border-spacing: 5px;
+  	margin-top: 10px;
+  	text-align: center;
+}
+@media(max-width: 600px) {
+	.moves .cell {
+      width: auto;
+      display: block;
+	}
+	.inner {
+		width: 100%;
+	}
+}
+
+@keyframes growl {
+    from {
+		margin-left: 5px;
+		transform: rotate(-135deg);
+    }
+    to {
+    	margin-left: 10px;
+    	transform: rotate(45deg);
+    }
+}
+
+#growl > i {
+	transform: rotate(-45deg);
+	padding-left: 10px;
+
+}
+#growl:hover > i {
+	animation-name: growl;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

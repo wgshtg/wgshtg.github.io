@@ -36,14 +36,10 @@ body:before {
 	width: 100%;
 }
 .img-item {
-	float: left;
-  	width: 20%;
-  	overflow: hidden;
-  	position: relative;
-}
-.img-item>img {
-	width:50%;
-	height: auto;
+  	width: 18%;
+	position: relative;
+	display: inline-block;
+	object-fit: contain;
 }
 .img-item:hover {
 	transform: scale(1.2);

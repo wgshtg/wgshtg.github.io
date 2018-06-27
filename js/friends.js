@@ -1,22 +1,25 @@
 var img_group = document.getElementById('img-group');
 var i;
-for(i=1; i<=151; i++){
-	var img_num = i > 99 ? `${i}` : i > 9 ? `0${i}` : `00${i}`; 
- //    fetch(`https://www.serebii.net/pokemongo/pokemon/${img_num}.png`, {method: 'get', mode: 'no-cors'})
-	// 	.then(function(response) {
-	// 		console.log(response);
-			
-	// 	}).catch(function(err) {
- //    		console.log(i+"失敗");
-	// })	
-	var a = document.createElement("a");
+var arr = Array.apply(null, new Array(151));
+arr.map((elem, index) => index + 1);
+for (i = 1; i <= 5; i++) {
+	var img_num = Math.floor((Math.random() * 151) + 1);
+	fetch(`https://pokeapi.co/api/v2/pokemon/${img_num}/`)
+	  .then(response => response.json())
+	  .then(pm => {
+		  // pm.sprites.front_default
+		  // its sprities are suck, so use its id to get other website img src
+		  console.log(pm.sprites.front_default);
+		  var id = pm.id > 99 ? pm.id : pm.id > 9 ? `0${pm.id}` :  `00${pm.id}`;
+		create(`https://www.serebii.net/pokemongo/pokemon/${id}.png`);
+	})
+	.catch(error => console.error(error));
+}
+
+function create(img_src) {
 	var img = document.createElement("img");
-	// img.setAttribute("src", `https://www.serebii.net/pokemongo/pokemon/${img_num}.png`);
-	img.src = `https://www.serebii.net/pokemongo/pokemon/${img_num}.png`;
-	a.className = "img-item";
-	a.appendChild(img);
-	console.log(a);
-	document.getElementById('img-group').appendChild(a);
-	
-	// document.getElementById("placehere").appendChild(elem);
+	img.src = img_src;
+	img.setAttribute("class", "img-item");
+	console.log(img);
+	document.getElementById('img-group').appendChild(img);
 }

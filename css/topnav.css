@@ -18,33 +18,96 @@
     padding: 5px;
     line-height: 60px;
 }
-.menu-btn a {
+.menu-check {
+    display: none;
+}
+.menu-label {
     color: #fff;
     font-size: 15pt;
 }
-.menu-btn {
+.menu-label {
     display: none;
-    position: fixed;
+    /*position: fixed;
     text-align: center;
     top: 8px;
     left: 0;
-    right: 0;
+    right: 0;*/
 }
-.menu-btn:focus {
-    .main-menu {
-        height: auto;
+@media (max-width: 600px) {
+    .nav-item {
+        display: none;
+        /*display: block;*/
+        /*background-color: rgba(215, 225, 242, 0.6);*/
+        /*opacity: 0.5;*/
     }
-    .main-menu .nav-item {
-        display: block;
+    .menu-block {
+        display: inline;
+        border-radius: 25px;
+        background-color: rgba(215, 225, 242, 0.6);
+        width: 60%;
+        height: 0px;
+        left: 0;
+        right: 0;
+        top: 10px;
+        position: inherit;
+        margin: 0 auto;
+        z-index: -1;
+        transition: height 0.5s ease-in-out;
     }
-}
-@media (max-width: 300px) {
-    .main-menu {
-        height: 0;
-        overflow: hidden;
-    }
-    .menu-btn {
-        display: block;
+    /*.menu-label {
+        top: 340px;
+        border-radius: 50%;
+        width: 30px;
+        margin: 0 auto;
+        left: 0;
+        display: inline;
         z-index: 98;
+    }*/
+    .menu-label {
+        display: inline;
+        top: 15px;
+        position: relative;
     }
+    .menu-check:checked ~ ul > .nav-item{
+        display: block;
+    }
+    .menu-check:checked ~ .menu-label{
+        top: 360px;
+    }
+    .menu-check:checked ~ .menu-block {
+        display: inline;
+        border-radius: 25px;
+        background-color: rgba(215, 225, 242, 0.6);
+        width: 60%;
+        height: 380px;
+        left: 0;
+        right: 0;
+        top: 10px;
+        position: inherit;
+        margin: 0 auto;
+        z-index: -1;
+        transition: height 0.5s ease-in-out;
+    }
+    .nav-item:active .menu-block {
+        display: inline;
+        border-radius: 25px;
+        background-color: rgba(215, 225, 242, 0.6);
+        width: 60%;
+        height: 0px;
+        left: 0;
+        right: 0;
+        top: 10px;
+        position: inherit;
+        margin: 0 auto;
+        z-index: -1;
+        transition: height 0.5s ease-in-out;
+    }
+    /*.main-menu {
+        border-radius: 25px;
+        background-color: rgba(215, 225, 242, 0.6);
+        width: 80%;
+        left: 0;
+        right: 0;
+        top: 10px;
+    }*/
 }

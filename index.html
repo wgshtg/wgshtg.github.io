@@ -13,7 +13,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/topnav.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/header.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/personal.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/moves.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/memories.css" />
+    
 </head>
 
 <body>
@@ -21,14 +23,16 @@
         <div class="head-wrapper">
             <div class="topnav">
                 <div class="main-menu">
+                    <input class="menu-check" id="menu-check" type="checkbox">
+                    <label for="menu-check" class="menu-label"><i class="fas fa-angle-down"></i></label>
+                    <div class="menu-block"></div>
                     <ul>
-                        <li class="nav-item"><a href="#">Home</a></li>
-                        <li class="nav-item"><a href="#about">About</a></li>
-                        <li class="nav-item"><a href="html/friends.html">Friends</a></li>
+                        <li class="nav-item"><a id='menu-home' href="#">Home</a></li>
+                        <li class="nav-item"><a id='menu-about' href="#about">About</a></li>
+                        <li class="nav-item"><a id='menu-moves' href="#moves">Moves</a></li>
+                        <li class="nav-item"><a id='menu-memories' href="#memories">Memories</a></li>
+                        <li class="nav-item"><a id='menu-friends' href="html/friends.html">Friends</a></li>
                     </ul>
-                </div>
-                <div class="menu-btn">
-                    <a><i class="fas fa-angle-down"></i></a>
                 </div>
             </div>
             <header class="header">
@@ -85,7 +89,41 @@
                </div>
             </div>
         </section>
+        <section class="moves" id="moves">
+            <h3 class="moves-title">Moves</h3>
+            <div class="inner cell-group">
+                <div class="cell" id="growl">Growl<i class="fas fa-rss"></i></div>
+                <div class="cell" id="wish">Wish<i class="fas fa-gift"></i></div>
+                <div class="cell" id="kiss">Ancient Power<i class="fas fa-shield-alt"></i></div>
+                <div class="cell" id="kiss">Sweet Kiss<i class="far fa-kiss-wink-heart"></i></div>
+            </div>
+        </section>
+        <section class="memories" id="memories">
+            <h3 class="memories-title">Memories</h3>
+            <div class="grid">
+    <div class="item item--medium">
+      <div class="item__details">
+        Play with Pikachu！
+      </div>
+    </div>
+    <div class="item item--medium">
+      <div class="item__details">
+        Ａｎｇｒｙ
+      </div>
+    </div>
+    <div class="item item--medium">
+      <div class="item__details">
+        Love &#10084; &#10084;
+      </div>
+    </div>
+    <div class="item item--full">
+      <div class="item__details">
+        Egg
+      </div>
+    </div>
+        </section>
     </div>
 </body>
-
+<script src="js/menu.js"></script>
+<script src="js/memories.js"></script>
 </html>
